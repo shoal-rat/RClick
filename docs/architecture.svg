@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="RClick Agent architecture">
+  <title>RClick Agent architecture</title>
+  <defs>
+    <marker id="arrB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2563eb"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker>
+  </defs>
+
+  <!-- background (solid white so the diagram stays readable on dark GitHub themes) -->
+  <rect x="1" y="1" width="898" height="558" rx="14" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+
+  <!-- Finder (left) -->
+  <rect x="44" y="84" width="290" height="180" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="189" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">Finder</text>
+  <rect x="64" y="128" width="250" height="116" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="189" y="160" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">FinderSyncExt</text>
+  <text x="189" y="178" text-anchor="middle" font-size="11" fill="#64748b">(patched, sandboxed)</text>
+  <line x1="84" y1="192" x2="294" y2="192" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="189" y="216" text-anchor="middle" font-size="11" fill="#64748b">menu render + click forward</text>
+
+  <!-- RClick Agent (right) -->
+  <rect x="546" y="84" width="320" height="156" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="706" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">RClick Agent</text>
+  <text x="706" y="130" text-anchor="middle" font-size="10" fill="#64748b">invisible LaunchAgent · starts at login · event-driven</text>
+  <g fill="#ffffff" stroke="#93c5fd" stroke-width="1">
+    <rect x="560" y="142" width="82" height="22" rx="11"/>
+    <rect x="650" y="142" width="88" height="22" rx="11"/>
+    <rect x="746" y="142" width="92" height="22" rx="11"/>
+    <rect x="560" y="172" width="52" height="22" rx="11"/>
+    <rect x="620" y="172" width="72" height="22" rx="11"/>
+    <rect x="700" y="172" width="66" height="22" rx="11"/>
+    <rect x="774" y="172" width="62" height="22" rx="11"/>
+    <rect x="560" y="202" width="110" height="22" rx="11"/>
+    <rect x="678" y="202" width="84" height="22" rx="11"/>
+    <rect x="770" y="202" width="62" height="22" rx="11"/>
+  </g>
+  <g font-size="10.5" fill="#1e40af" text-anchor="middle">
+    <text x="601" y="157">New File ×8</text>
+    <text x="694" y="157">Copy Path ×4</text>
+    <text x="792" y="157">Move/Copy To</text>
+    <text x="586" y="187">Trash</text>
+    <text x="656" y="187">Compress</text>
+    <text x="733" y="187">SHA-256</text>
+    <text x="805" y="187">AirDrop</text>
+    <text x="615" y="217">Terminal/VS Code</text>
+    <text x="720" y="217">Hidden Files</text>
+    <text x="801" y="217">Folders</text>
+  </g>
+
+  <!-- IPC loop -->
+  <line x1="536" y1="140" x2="352" y2="140" stroke="#2563eb" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="440" y="128" text-anchor="middle" font-size="11" fill="#1e40af">menu config</text>
+  <text x="440" y="166" text-anchor="middle" font-size="10" font-weight="bold" fill="#475569">DistributedNotificationCenter IPC</text>
+  <text x="440" y="181" text-anchor="middle" font-size="10" fill="#64748b">HMAC-SHA256 signed</text>
+  <line x1="344" y1="205" x2="528" y2="205" stroke="#2563eb" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="440" y="226" text-anchor="middle" font-size="11" fill="#1e40af">heartbeat / clicks</text>
+
+  <!-- terminated-on-launch arrow -->
+  <polyline points="566,240 566,448 300,448" fill="none" stroke="#94a3b8" stroke-width="1.75" marker-end="url(#arrG)"/>
+  <text x="436" y="438" text-anchor="middle" font-size="10.5" font-style="italic" fill="#64748b">terminated on launch</text>
+
+  <!-- RClick.app (never runs) -->
+  <rect x="44" y="408" width="250" height="80" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="169" y="444" text-anchor="middle" font-size="15" font-weight="bold" fill="#64748b"><tspan fill="#dc2626">✕ </tspan>RClick.app</text>
+  <text x="169" y="464" text-anchor="middle" font-size="11" fill="#94a3b8">(never runs)</text>
+
+  <!-- TCC prompt (eliminated) -->
+  <rect x="600" y="408" width="272" height="72" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="736" y="436" text-anchor="middle" font-size="13" font-weight="bold" fill="#64748b"><tspan fill="#dc2626">✕ </tspan>TCC prompt</text>
+  <text x="736" y="456" text-anchor="middle" font-size="11" font-style="italic" fill="#94a3b8">“access data from other apps”</text>
+  <text x="736" y="500" text-anchor="middle" font-size="10.5" fill="#64748b">eliminated: no app-group access in extension</text>
+</svg>

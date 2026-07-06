@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" width="900" height="640" font-family="Helvetica, Arial, sans-serif">
+  <title>RClick context menu mockup</title>
+  <defs>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#31435f" flood-opacity="0.14"/>
+    </filter>
+    <g id="i-gear" stroke="#5f6368" stroke-width="1.4" fill="none" stroke-linecap="round">
+      <circle r="3.1"/>
+      <path d="M0 -6 V-4.6 M0 4.6 V6 M-6 0 H-4.6 M4.6 0 H6 M-4.2 -4.2 L-3.2 -3.2 M3.2 3.2 L4.2 4.2 M4.2 -4.2 L3.2 -3.2 M-3.2 3.2 L-4.2 4.2"/>
+    </g>
+    <g id="i-term">
+      <rect x="-6" y="-5" width="12" height="10" rx="2" fill="#3a3a3c"/>
+      <path d="M-3.6 -2 L-1.2 0.2 L-3.6 2.4" stroke="#ffffff" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 2.6 H3.4" stroke="#ffffff" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <g id="i-code" stroke="#0a84ff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-2.2 -3.8 L-5.4 0 L-2.2 3.8"/>
+      <path d="M2.2 -3.8 L5.4 0 L2.2 3.8"/>
+    </g>
+    <g id="i-copy" stroke="#5f6368" stroke-width="1.3" stroke-linejoin="round">
+      <rect x="-1.6" y="-5.2" width="7" height="8.4" rx="1.2" fill="none"/>
+      <rect x="-5.4" y="-3.2" width="7" height="8.4" rx="1.2" fill="#ffffff"/>
+    </g>
+    <g id="i-zip" stroke="#5f6368" stroke-width="1.3" fill="none" stroke-linejoin="round">
+      <rect x="-4.4" y="-5.4" width="8.8" height="10.8" rx="1.6"/>
+      <path d="M0 -5.4 V0.4" stroke-dasharray="1.6 1.4"/>
+      <rect x="-1.2" y="0.8" width="2.4" height="3" rx="0.8"/>
+    </g>
+    <g id="i-drop" fill="none" stroke="#0a84ff">
+      <circle r="6" stroke-opacity="0.35" stroke-width="1.2"/>
+      <circle r="3.7" stroke-opacity="0.65" stroke-width="1.2"/>
+      <circle r="1.5" fill="#0a84ff" stroke="none"/>
+    </g>
+    <g id="i-trash" stroke="#5f6368" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-5.4 -3.4 H5.4"/>
+      <path d="M-1.8 -5.2 H1.8"/>
+      <path d="M-4 -3.4 L-3.3 5.4 H3.3 L4 -3.4"/>
+      <path d="M-1.4 -1 V3.2 M1.4 -1 V3.2"/>
+    </g>
+    <g id="i-doc" stroke="#5f6368" stroke-width="1.3" stroke-linejoin="round">
+      <path d="M-3.6 -5.6 H1.2 L3.8 -3 V5.6 H-3.6 Z" fill="#ffffff"/>
+      <path d="M1.2 -5.6 V-3 H3.8" fill="none"/>
+    </g>
+    <path id="i-folder" d="M-5.6 -3.2 A1.2 1.2 0 0 1 -4.4 -4.4 H-1.4 L0.2 -2.6 H4.6 A1.2 1.2 0 0 1 5.8 -1.4 V3.2 A1.2 1.2 0 0 1 4.6 4.4 H-4.4 A1.2 1.2 0 0 1 -5.6 3.2 Z" fill="#aaccf5" stroke="#7ba7dd" stroke-width="1" stroke-linejoin="round"/>
+    <g id="i-move" stroke="#5f6368" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-5.4 0 H4"/>
+      <path d="M1.2 -3 L4.6 0 L1.2 3"/>
+    </g>
+    <text id="i-hash" font-size="10.5" font-weight="bold" fill="#5f6368" text-anchor="middle" y="3.8">#</text>
+    <g id="i-eye">
+      <ellipse rx="5.6" ry="3.4" fill="none" stroke="#5f6368" stroke-width="1.3"/>
+      <circle r="1.5" fill="#5f6368"/>
+    </g>
+  </defs>
+
+  <!-- solid background so it reads on dark GitHub themes -->
+  <rect x="0" y="0" width="920" height="640" fill="#ffffff"/>
+
+  <!-- ============ main context menu panel ============ -->
+  <rect x="44" y="118" width="248" height="394" rx="10" fill="#ffffff" stroke="#d6d9e0" stroke-width="1" filter="url(#sh)"/>
+
+  <!-- connectors from submenu arrows to panels (drawn over main panel edge, under submenu panels) -->
+  <g fill="none" stroke="#a9c1e4" stroke-width="1.5">
+    <path d="M292 291 C 390 291, 430 129, 536 129"/>
+    <path d="M292 468 C 390 468, 430 344, 536 344"/>
+    <path d="M292 492 C 390 492, 430 548, 536 548"/>
+  </g>
+  <g fill="#a9c1e4">
+    <circle cx="292" cy="291" r="2.5"/>
+    <circle cx="292" cy="468" r="2.5"/>
+    <circle cx="292" cy="492" r="2.5"/>
+  </g>
+
+  <!-- dimmed native Finder items -->
+  <g font-size="13" fill="#b9b9be">
+    <text x="78" y="142">Open</text>
+    <text x="78" y="166">Open With</text>
+    <text x="280" y="166" text-anchor="end" font-size="12">&#9656;</text>
+    <text x="78" y="190">Move to Trash</text>
+    <text x="78" y="214">Get Info</text>
+    <text x="78" y="238">Rename</text>
+    <text x="78" y="262">&#8230;</text>
+  </g>
+  <line x1="54" y1="274.5" x2="282" y2="274.5" stroke="#e3e3e8" stroke-width="1"/>
+
+  <!-- highlighted RClick block -->
+  <rect x="50" y="277" width="236" height="230" rx="7" fill="#edf4ff" stroke="#d8e6fb" stroke-width="1"/>
+  <g font-size="13" fill="#1d1d1f">
+    <text x="78" y="295">Actions</text>
+    <text x="78" y="319">Open in Terminal</text>
+    <text x="78" y="343">Open in VS Code</text>
+    <text x="78" y="367">Copy Path</text>
+    <text x="78" y="391">Compress</text>
+    <text x="78" y="415">AirDrop</text>
+    <text x="78" y="439">Move to Trash</text>
+    <text x="78" y="472">New File</text>
+    <text x="78" y="496">Common Folders</text>
+  </g>
+  <g font-size="12" fill="#6e6e73">
+    <text x="280" y="295" text-anchor="end">&#9656;</text>
+    <text x="280" y="472" text-anchor="end">&#9656;</text>
+    <text x="280" y="496" text-anchor="end">&#9656;</text>
+  </g>
+  <line x1="58" y1="451.5" x2="278" y2="451.5" stroke="#d3e2f6" stroke-width="1"/>
+  <use href="#i-gear" transform="translate(62,291)"/>
+  <use href="#i-term" transform="translate(62,315)"/>
+  <use href="#i-code" transform="translate(62,339)"/>
+  <use href="#i-copy" transform="translate(62,363)"/>
+  <use href="#i-zip" transform="translate(62,387)"/>
+  <use href="#i-drop" transform="translate(62,411)"/>
+  <use href="#i-trash" transform="translate(62,435)"/>
+  <use href="#i-doc" transform="translate(62,468)"/>
+  <use href="#i-folder" transform="translate(62,492)"/>
+
+  <!-- ============ submenu: Actions ============ -->
+  <rect x="530" y="34" width="330" height="190" rx="10" fill="#ffffff" stroke="#d6d9e0" stroke-width="1" filter="url(#sh)"/>
+  <text x="546" y="52" font-size="11" font-weight="bold" fill="#8b8b90" letter-spacing="1">ACTIONS</text>
+  <line x1="542" y1="61" x2="848" y2="61" stroke="#ececf0" stroke-width="1"/>
+  <g font-size="12.5" fill="#1d1d1f">
+    <text x="566" y="81">Copy Relative Path</text>
+    <text x="566" y="103">Copy File Name</text>
+    <text x="566" y="125">Copy Name w/o Extension</text>
+    <text x="566" y="147">Move To&#8230;</text>
+    <text x="566" y="169">Copy To&#8230;</text>
+    <text x="566" y="191">Calculate SHA-256</text>
+    <text x="566" y="213">Show Hidden Files</text>
+  </g>
+  <use href="#i-copy" transform="translate(548,77)"/>
+  <use href="#i-doc" transform="translate(548,99)"/>
+  <use href="#i-doc" transform="translate(548,121)"/>
+  <use href="#i-move" transform="translate(548,143)"/>
+  <use href="#i-copy" transform="translate(548,165)"/>
+  <use href="#i-hash" transform="translate(548,187)"/>
+  <use href="#i-eye" transform="translate(548,209)"/>
+
+  <!-- ============ submenu: New File ============ -->
+  <rect x="530" y="238" width="330" height="212" rx="10" fill="#ffffff" stroke="#d6d9e0" stroke-width="1" filter="url(#sh)"/>
+  <text x="546" y="256" font-size="11" font-weight="bold" fill="#8b8b90" letter-spacing="1">NEW FILE</text>
+  <line x1="542" y1="266" x2="848" y2="266" stroke="#ececf0" stroke-width="1"/>
+  <g font-size="12.5" fill="#1d1d1f">
+    <text x="566" y="285">Text</text>
+    <text x="566" y="307">Markdown</text>
+    <text x="566" y="329">Python</text>
+    <text x="566" y="351">JSON</text>
+    <text x="566" y="373">HTML</text>
+    <text x="566" y="395">Word (.docx)</text>
+    <text x="566" y="417">PowerPoint (.pptx)</text>
+    <text x="566" y="439">Excel (.xlsx)</text>
+  </g>
+  <g font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    <rect x="542.5" y="275.5" width="11" height="11" rx="3" fill="#8e8e93"/><text x="548" y="283.8">T</text>
+    <rect x="542.5" y="297.5" width="11" height="11" rx="3" fill="#4a4a4f"/><text x="548" y="305.8">M</text>
+    <rect x="542.5" y="319.5" width="11" height="11" rx="3" fill="#3776ab"/><text x="548" y="327.8">P</text>
+    <rect x="542.5" y="341.5" width="11" height="11" rx="3" fill="#e6a117"/><text x="548" y="349.8">J</text>
+    <rect x="542.5" y="363.5" width="11" height="11" rx="3" fill="#e34f26"/><text x="548" y="371.8">H</text>
+    <rect x="542.5" y="385.5" width="11" height="11" rx="3" fill="#2b579a"/><text x="548" y="393.8">W</text>
+    <rect x="542.5" y="407.5" width="11" height="11" rx="3" fill="#d24726"/><text x="548" y="415.8">P</text>
+    <rect x="542.5" y="429.5" width="11" height="11" rx="3" fill="#217346"/><text x="548" y="437.8">X</text>
+  </g>
+
+  <!-- ============ submenu: Common Folders ============ -->
+  <rect x="530" y="464" width="330" height="168" rx="10" fill="#ffffff" stroke="#d6d9e0" stroke-width="1" filter="url(#sh)"/>
+  <text x="546" y="482" font-size="11" font-weight="bold" fill="#8b8b90" letter-spacing="1">COMMON FOLDERS</text>
+  <line x1="542" y1="492" x2="848" y2="492" stroke="#ececf0" stroke-width="1"/>
+  <g font-size="12.5" fill="#1d1d1f">
+    <text x="566" y="511">Desktop</text>
+    <text x="566" y="533">Documents</text>
+    <text x="566" y="555">Downloads</text>
+    <text x="566" y="577">Home</text>
+    <text x="566" y="599">Applications</text>
+    <text x="566" y="621">Codex Projects</text>
+  </g>
+  <use href="#i-folder" transform="translate(548,507)"/>
+  <use href="#i-folder" transform="translate(548,529)"/>
+  <use href="#i-folder" transform="translate(548,551)"/>
+  <use href="#i-folder" transform="translate(548,573)"/>
+  <use href="#i-folder" transform="translate(548,595)"/>
+  <use href="#i-folder" transform="translate(548,617)"/>
+</svg>

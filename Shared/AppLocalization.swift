@@ -33,8 +33,17 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 enum AppLocalization {
     static let tableName = "Localizable"
     private static let selectedLanguageKey = "SELECTED_LANGUAGE"
+    // Deliberately NOT an app-group ("group.*") suite. On macOS 15+ an app
+    // group id that is not prefixed with the team ID routes every access
+    // through a TCC "App Data" consent — and because the answer is never
+    // persisted for this class, a fresh FinderSyncExt process re-prompted
+    // ("RClick" would like to access data from other apps) after every Finder
+    // restart. A plain preferences domain has no group container and never
+    // prompts. Trade-off: the app and the extension each read their own copy
+    // of this domain, so a language override set in the app no longer reaches
+    // the extension (the extension falls back to the system language).
     private static var groupDefaults: UserDefaults {
-        UserDefaults(suiteName: "group.cn.wflixu.RClick") ?? .standard
+        UserDefaults(suiteName: "prefs.cn.wflixu.RClick") ?? .standard
     }
 
     static var systemLanguage: AppLanguage {
