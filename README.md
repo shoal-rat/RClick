@@ -86,7 +86,7 @@ The agent is strictly event-driven — no timers, no polling loops.
 
 ## Known limitations
 
-- **No menu in iCloud-synced folders.** FinderSync extensions cannot inject menus into FileProvider-backed windows (iCloud Drive, Desktop & Documents sync). This is an OS restriction, not fixable here.
+- **No right-click menu in iCloud-synced folders — use the toolbar button there.** FinderSync extensions cannot inject context menus into FileProvider-backed views (iCloud Drive, and Desktop & Documents when iCloud sync is on); macOS suppresses them for every extension — in the window, on the desktop wallpaper, and no matter how the folder is opened. The extension's **Finder toolbar button** is not affected: add it once via **View → Customize Toolbar…** (drag the RClick item into the toolbar), and clicking it shows the identical full menu in any window — iCloud locations included — with actions correctly targeting the shown folder (verified: New File from the toolbar menu in an iCloud-synced Desktop window creates the file in `~/Desktop`). Alternatively, turning off iCloud's "Desktop & Documents Folders" restores right-click menus in those two folders, at the cost of the sync.
 - **Updating RClick from upstream re-introduces the prompt.** A new upstream build restores the app-group read in the extension; you must re-apply the source fix or re-do the byte-patch after any update.
 
 ## Troubleshooting
